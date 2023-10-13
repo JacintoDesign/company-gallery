@@ -37,12 +37,12 @@ nav {
 
 .nav-right a {
   margin-left: 20px;
-  color: rgb(51, 51, 51);
+  color: hsl(0, 0%, 20%);
   text-decoration: none;
 }
 
   .nav-right a:hover {
-    text-decoration: underline;
+    color: hsl(0, 0%, 40%);
   }
 
 /* Main Content */

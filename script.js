@@ -28,6 +28,7 @@ window.addEventListener('scroll', checkScroll);
 const items = document.querySelectorAll('.item');
 
 items.forEach(item => {
+  item.title = 'Click to Enlarge';
   item.addEventListener('click', () => {
     const imgSrc = item.querySelector('img').src;
     const modal = document.createElement('div');
