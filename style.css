@@ -79,3 +79,48 @@ body {
   display: block;
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: cover;
+}
+
+/* Media Queries -------------------- */
+@media (max-width: 1025px) {
+  body {
+    padding: 5px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* One column */
+    grid-template-rows: repeat(10, minmax(150px, auto)); /* Flexible rows */
+  }
+
+  /* Reset styles for items */
+  .item:nth-child(n),
+  .item.mirrored:nth-child(n) {
+    grid-row: auto;
+    grid-column: auto;
+  }
+}
+
+/* Target horizontal orientation and typical landscape widths */
+@media (orientation: landscape) and (max-width: 1024px) {
+  .item img {
+    max-height: 90vh;
+    margin: 0 auto; /* center the image */
+    display: block;
+  }
+}
