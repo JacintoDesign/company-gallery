@@ -21,7 +21,7 @@ nav {
   color: rgb(51, 51, 51);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
   height: 60px;
   background: whitesmoke;
 }
@@ -42,7 +42,7 @@ nav {
 }
 
   .nav-right a:hover {
-    color: hsl(0, 0%, 40%);
+    color: hsl(0, 0%, 50%);
   }
 
 /* Main Content */
@@ -85,14 +85,14 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1001;
+  z-index: 101;
 }
 
-.modal img {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: cover;
-}
+  .modal img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: cover;
+  }
 
 /* Footer */
 footer {
@@ -116,7 +116,7 @@ footer {
   }
 
     .social-icons a:hover {
-      color: hsl(0, 0%, 40%);
+      color: hsl(0, 0%, 50%);
     }
 
 /* Media Queries -------------------- */
@@ -129,13 +129,13 @@ footer {
     grid-template-columns: 1fr; /* One column */
     grid-template-rows: repeat(10, minmax(150px, auto)); /* Flexible rows */
     padding: 5px;
+    margin: auto;
   }
 
-  /* Reset styles for items */
-  .grid > div {
-    grid-row: auto;
-    grid-column: auto;
-  }
+    /* Reset styles for items */
+    .grid > div {
+      grid-area: auto;
+    }
 }
 
 /* Target horizontal orientation and typical landscape widths */

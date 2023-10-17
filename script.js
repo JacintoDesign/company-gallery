@@ -24,11 +24,6 @@ items.forEach(item => {
 });
 
 
-
-
-
-
-
 // Function to check if page is scrolled and adjust the logo size
 function checkScroll() {
   const navbar = document.getElementById("navbar");
