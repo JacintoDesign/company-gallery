@@ -11,7 +11,7 @@ items.forEach(item => {
     // Create the img element
     const imgElement = document.createElement('img');
     imgElement.src = imgSrc;
-    imgElement.alt = 'Enlarged Image';
+    imgElement.alt = 'Enlarged Abstract Image';
     // Append the img element to the modal div
     modal.appendChild(imgElement);
     // Add the modal to the body
