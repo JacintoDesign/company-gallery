@@ -1,3 +1,26 @@
+// Allow for selection of image to trigger modal view
+const items = document.querySelectorAll('.item');
+
+items.forEach(item => {
+  item.title = 'Click to Enlarge';
+  item.addEventListener('click', () => {
+    const imgSrc = item.querySelector('img').src;
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+    modal.innerHTML = `<img src="${imgSrc}" alt="Enlarged Image">`;
+    document.body.appendChild(modal);
+    
+    modal.addEventListener('click', () => {
+      modal.remove();
+    });
+  });
+});
+
+
+
+
+
+
 // Function to check if page is scrolled and adjust the logo size
 function checkScroll() {
   const navbar = document.getElementById("navbar");
@@ -24,20 +47,4 @@ function checkScroll() {
 // Event listener for scroll event
 window.addEventListener('scroll', checkScroll);
 
-// Allow for selection of image to trigger modal view
-const items = document.querySelectorAll('.item');
 
-items.forEach(item => {
-  item.title = 'Click to Enlarge';
-  item.addEventListener('click', () => {
-    const imgSrc = item.querySelector('img').src;
-    const modal = document.createElement('div');
-    modal.classList.add('modal');
-    modal.innerHTML = `<img src="${imgSrc}" alt="Enlarged Image">`;
-    document.body.appendChild(modal);
-    
-    modal.addEventListener('click', () => {
-      modal.remove();
-    });
-  });
-});
