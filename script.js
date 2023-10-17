@@ -1,20 +1,28 @@
 // Allow for selection of image to trigger modal view
-const items = document.querySelectorAll('.item');
+const items = document.querySelectorAll('.grid > div');
 
 items.forEach(item => {
-  item.title = 'Click to Enlarge';
+  item.title = 'Click to Enlarge';  
   item.addEventListener('click', () => {
     const imgSrc = item.querySelector('img').src;
+    // Create the modal div
     const modal = document.createElement('div');
     modal.classList.add('modal');
-    modal.innerHTML = `<img src="${imgSrc}" alt="Enlarged Image">`;
+    // Create the img element
+    const imgElement = document.createElement('img');
+    imgElement.src = imgSrc;
+    imgElement.alt = 'Enlarged Image';
+    // Append the img element to the modal div
+    modal.appendChild(imgElement);
+    // Add the modal to the body
     document.body.appendChild(modal);
-    
+    // Remove the modal when it's clicked
     modal.addEventListener('click', () => {
       modal.remove();
     });
   });
 });
+
 
 
 
